@@ -10,8 +10,25 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* .card-container {
-  height: 100px;
-  width: 100px;
-  background-color: #111;
-} */
+Input,
+Select,
+textarea {
+  width: 15%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  max-width: fit-content;
+}
+
+.card {
+  border: 1px solid #111;
+  padding: 0.2rem 1rem;
+  margin: 1rem;
+  text-align: center;
+}
