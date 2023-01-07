@@ -10,10 +10,26 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+h1 {
+  margin: 1rem 2rem 0rem 2rem;
+}
+
+form {
+  margin: 2.5rem 2rem;
+}
+
 input,
 Select,
 textarea {
   width: 15%;
+}
+
+.form-control {
+  width: 25%;
+}
+
+.form-select {
+  width: 25%;
 }
 
 .flex {
@@ -27,7 +43,7 @@ textarea {
 }
 
 .card {
-  border: 1px solid #111;
+  border: 1px solid #89b8ff;
   padding: 0.2rem 1rem;
   margin: 1rem;
   text-align: center;

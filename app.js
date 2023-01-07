@@ -39,7 +39,7 @@ function addCard(e) {
   fname.value = "";
   lname.value = "";
   roll.value = "";
-  gender.value = "";
+  gender.value = "Select Gender";
   blood.value = "";
   contact.value = "";
   address.value = "";
