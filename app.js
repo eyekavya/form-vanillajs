@@ -18,27 +18,41 @@ function addCard(e) {
   const nameinfo = document.createElement("p");
   cardDiv.appendChild(nameinfo);
   nameinfo.innerText = fname.value + " " + lname.value;
-  fname.value = "";
-  lname.value = "";
+
   const rollinfo = document.createElement("p");
   cardDiv.appendChild(rollinfo);
   rollinfo.innerText = roll.value;
-  roll.value = "";
+
   const genderinfo = document.createElement("p");
   cardDiv.appendChild(genderinfo);
   genderinfo.innerText = gender.value;
-  gender.value = "";
+
   const bloodinfo = document.createElement("p");
   cardDiv.appendChild(bloodinfo);
   bloodinfo.innerText = blood.value;
-  blood.value = "";
+
   const contactinfo = document.createElement("p");
   cardDiv.appendChild(contactinfo);
   contactinfo.innerText = contact.value;
-  contact.value = "";
+
   const addressinfo = document.createElement("p");
   cardDiv.appendChild(addressinfo);
   addressinfo.innerText = address.value;
+
+  saveform(fname.value);
+  saveform(lname.value);
+  saveform(roll.value);
+  saveform(gender.value);
+  saveform(blood.value);
+  saveform(contact.value);
+  saveform(address.value);
+
+  fname.value = "";
+  lname.value = "";
+  roll.value = "";
+  gender.value = "";
+  blood.value = "";
+  contact.value = "";
   address.value = "";
   //   if (
   //     (fname.value ||
@@ -51,4 +65,15 @@ function addCard(e) {
   //   ) {
   //     alert("Please fill the form completely");
   //   }
+}
+
+function saveform(form) {
+  let formData;
+  if (localStorage.getItem("formData") === null) {
+    formData = [];
+  } else {
+    formData = JSON.parse(localStorage.getItem("formData"));
+  }
+  formData.push(form);
+  localStorage.setItem("formData", JSON.stringify(formData));
 }
