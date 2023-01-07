@@ -13,32 +13,17 @@ document.addEventListener("DOMContentLoaded", getform);
 
 function addCard(e) {
   e.preventDefault();
-  // const cardDiv = document.createElement("div");
-  // cardDiv.classList.add("card");
-  // cardContainer.appendChild(cardDiv);
-  // const nameinfo = document.createElement("p");
-  // cardDiv.appendChild(nameinfo);
-  // nameinfo.innerText = fname.value + " " + lname.value;
-
-  // const rollinfo = document.createElement("p");
-  // cardDiv.appendChild(rollinfo);
-  // rollinfo.innerText = roll.value;
-
-  // const genderinfo = document.createElement("p");
-  // cardDiv.appendChild(genderinfo);
-  // genderinfo.innerText = gender.value;
-
-  // const bloodinfo = document.createElement("p");
-  // cardDiv.appendChild(bloodinfo);
-  // bloodinfo.innerText = blood.value;
-
-  // const contactinfo = document.createElement("p");
-  // cardDiv.appendChild(contactinfo);
-  // contactinfo.innerText = contact.value;
-
-  // const addressinfo = document.createElement("p");
-  // cardDiv.appendChild(addressinfo);
-  // addressinfo.innerText = address.value;
+  if (
+    (fname.value &&
+      lname.value &&
+      roll.value &&
+      gender.value &&
+      blood.value &&
+      contact.value &&
+      address.value) == ""
+  ) {
+    return alert("Please fill the form completely");
+  }
 
   const data = {
     fname: fname.value,
@@ -58,17 +43,6 @@ function addCard(e) {
   blood.value = "";
   contact.value = "";
   address.value = "";
-  //   if (
-  //     (fname.value ||
-  //       lname.value ||
-  //       roll.value ||
-  //       gender.value ||
-  //       blood.value ||
-  //       contact.value ||
-  //       address.value) == ""
-  //   ) {
-  //     alert("Please fill the form completely");
-  //   }
 }
 
 function saveform(form) {
@@ -120,35 +94,4 @@ function getform() {
     cardDiv.appendChild(addressinfo);
     addressinfo.innerText = e.address;
   });
-
-  // formData.forEach((e) => {
-  //   const nameinfo = document.createElement("p");
-  //   cardDiv.appendChild(nameinfo);
-  //   nameinfo.innerText = e;
-  // });
-  // formData.forEach((f) => {
-  //   const rollinfo = document.createElement("p");
-  //   cardDiv.appendChild(rollinfo);
-  //   rollinfo.innerText = f;
-  // });
-  // formData.forEach((g) => {
-  //   const genderinfo = document.createElement("p");
-  //   cardDiv.appendChild(genderinfo);
-  //   genderinfo.innerText = g;
-  // });
-  // formData.forEach((h) => {
-  //   const bloodinfo = document.createElement("p");
-  //   cardDiv.appendChild(bloodinfo);
-  //   bloodinfo.innerText = h;
-  // });
-  // formData.forEach((i) => {
-  //   const contactinfo = document.createElement("p");
-  //   cardDiv.appendChild(contactinfo);
-  //   contactinfo.innerText = i;
-  // });
-  // formData.forEach((j) => {
-  //   const addressinfo = document.createElement("p");
-  //   cardDiv.appendChild(addressinfo);
-  //   addressinfo.innerText = j;
-  // });
 }

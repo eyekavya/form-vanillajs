@@ -10,7 +10,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-Input,
+input,
 Select,
 textarea {
   width: 15%;

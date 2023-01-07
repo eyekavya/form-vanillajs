@@ -8,30 +8,28 @@
     <title>Form</title>
   </head>
   <body>
-
-    <div>
-        <label>First Name</label>
-        <Input type="text" class="fname"></Input><br>
-        <label>Last Name</label>
-        <Input type="text" class="lname"></Input><br>
-        <label>Roll no.</label>
-        <Input type="number" class="roll"></Input><br>
-        <label>Gender</label>
-        <Select class="gender">
-          <Option></Option>
-            <Option>Female</Option>
-            <Option>Male</Option>
-        </Select><br>
-        <label>Blood Group</label>
-        <Input type="text" class="blood"></Input><br>
-        <label>Contact no.</label>
-        <Input type="number" class="contact"></Input><br>
-        <label>Address</label>
-        <textarea cols="30" rows="5" class="address"></textarea><br>
-        <button class="submitBtn">Submit</button>
-    </div>
-    <div class="card-container flex">
-    </div>
+    <form>
+      <label>First Name</label>
+      <input type="text" class="fname" /><br />
+      <label>Last Name</label>
+      <input type="text" class="lname" /><br />
+      <label>Roll no.</label>
+      <input type="number" class="roll" /><br />
+      <label>Gender</label>
+      <select class="gender">
+        <option></option>
+        <option>Female</option>
+        <option>Male</option></select
+      ><br />
+      <label>Blood Group</label>
+      <input type="text" class="blood" /><br />
+      <label>Contact no.</label>
+      <input type="number" class="contact" /><br />
+      <label>Address</label>
+      <textarea cols="30" rows="5" class="address"></textarea><br />
+      <button class="submitBtn">Submit</button>
+    </form>
+    <div class="card-container flex"></div>
 
     <script src="./app.js"></script>
   </body>
